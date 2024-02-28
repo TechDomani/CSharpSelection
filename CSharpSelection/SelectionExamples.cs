@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
+
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSharpSelection
 {
@@ -21,7 +19,7 @@ namespace CSharpSelection
 				Console.WriteLine("You have both brothers and sisters");
 			}
 			// Conditional XOR
-			if (hasBrothers | hasSisters)
+			if (hasBrothers ^ hasSisters)
 			{
 				Console.WriteLine("You have brothers or sisters but not both");
 			}
@@ -51,7 +49,7 @@ namespace CSharpSelection
 			{
 				grade = "Distinction";
 			}
-			else if (mark >= 70)
+			else if (mark > 70)
 			{
 				grade = "Merit";
 			}
@@ -78,9 +76,13 @@ namespace CSharpSelection
 			// Ternary operator
 			string message = totalWeight < LiftCapacity ? "Lift good to go" : "Too many people in lift";
 			return message;
-		}
+        }
 
-		public static decimal DetermineTip(string service)
+        //A switch statement is more efficient
+		// The compiler will optimize it to a lookup table
+		// whereas with if/else statements it cannot
+		// Probably will make little difference if the number of cases is small
+        public static decimal DetermineTip(string service)
 		{
 			decimal tip;
 			service = service.ToLower();
