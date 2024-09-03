@@ -42,7 +42,7 @@ namespace CSharpSelection
 		{
 			if (mark < 0 || mark > 100)
 			{
-				throw new ArgumentOutOfRangeException($"Mark should be between 0 and 100");
+				throw new ArgumentOutOfRangeException(nameof(mark), "Mark should be between 0 and 100");
 			}
 			string grade;
 			if (mark > 80)
@@ -78,10 +78,10 @@ namespace CSharpSelection
 			return message;
         }
 
-        //A switch statement is more efficient
+        // A switch statement is more efficient
 		// The compiler will optimize it to a lookup table
 		// whereas with if/else statements it cannot
-		// Probably will make little difference if the number of cases is small
+		// However it will probably make little difference if the number of cases is small
         public static decimal DetermineTip(string service)
 		{
 			decimal tip;

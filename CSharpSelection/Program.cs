@@ -6,11 +6,11 @@ namespace CSharpSelection
 	{
 		static void Main()
 		{
-			//Console.WriteLine("# Assign Letter Grade");
-			//string grade = SelectionExamples.AssignLetterGrade(90);
-			//Console.WriteLine($"Your grade was a {grade}\n");
+			Console.WriteLine("# Assign Letter Grade");
+			string grade = SelectionExamples.AssignLetterGrade(90);
+			Console.WriteLine($"Your grade was a {grade}\n");
 			//// Can use Debug.Assert to check return values
-			//Debug.Assert(SelectionExamples.AssignLetterGrade(70) == "Merit", "Merit expected");
+			Debug.Assert(SelectionExamples.AssignLetterGrade(70) == "Merit", "Merit expected");
 
 			//Console.WriteLine("# Conditional Operations");
 			//SelectionExamples.ConditionalOperations(false, true);
@@ -24,9 +24,9 @@ namespace CSharpSelection
 			///string message = SelectionExamples.LiftTakeoff(5, 142d);
 			//Console.WriteLine($"{message}\n");
 
-			Console.WriteLine("# Determine tip");
-			decimal tip = SelectionExamples.DetermineTip("Good");
-			Console.WriteLine($"The tip will be {tip}\n");
+			//Console.WriteLine("# Determine tip");
+			//decimal tip = SelectionExamples.DetermineTip("Good");
+			//Console.WriteLine($"The tip will be {tip}\n");
 
 			//Console.WriteLine("# Determine tip with enum");
 			//decimal tip2 = SelectionExamples.DetermineTip(SelectionExamples.ServiceLevel.Good);
