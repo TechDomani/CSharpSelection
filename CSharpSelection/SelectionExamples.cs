@@ -125,6 +125,7 @@ namespace CSharpSelection
 				case ServiceLevel.Ok:
 					tip = 0.1m;
 					break;
+				case ServiceLevel.Rubbish:
 				default:
 					tip = 0m;
 					break;
